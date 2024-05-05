@@ -1,5 +1,6 @@
 package com.vaccinationbookingsystem.dto.responseDto;
 
+import com.vaccinationbookingsystem.Enum.CenterType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -8,11 +9,13 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AddDoctorResponseDto {
+public class VaccinationCenterResponseDto {
 
-    String name;
+    CenterType centerType;
+
+    String centerName;
+
+    String address;
 
     String message;
-
-    VaccinationCenterResponseDto vaccinationCenterResponseDto;
 }

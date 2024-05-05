@@ -1,4 +1,8 @@
 package com.vaccinationbookingsystem.Enum;
 
-public class DoseType {
+public enum DoseType {
+
+    COVAXIN,
+    SPUTNIK,
+    COVISHIELD
 }

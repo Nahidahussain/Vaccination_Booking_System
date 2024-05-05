@@ -8,11 +8,9 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AddDoctorResponseDto {
+public class AddPersonResponseDto {
 
     String name;
 
     String message;
-
-    VaccinationCenterResponseDto vaccinationCenterResponseDto;
 }

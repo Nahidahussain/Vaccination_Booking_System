@@ -1,23 +1,23 @@
-package com.vaccinationbookingsystem.dto.requestDto;
+package com.vaccinationbookingsystem.dto.responseDto;
 
 import com.vaccinationbookingsystem.Enum.Gender;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class AddDoctorRequestDto {
-
-    Integer centerId;
+public class DoctorResponseByAgeDto {
 
     String name;
 
+    String email;
+
     int age;
 
-    String emailId;
-
     Gender gender;
+
+    VaccinationCenterResponseDto vaccinationCenterResponseDto;
 }

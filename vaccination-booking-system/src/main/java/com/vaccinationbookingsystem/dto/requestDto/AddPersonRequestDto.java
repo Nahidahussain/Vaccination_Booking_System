@@ -5,13 +5,11 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class AddDoctorRequestDto {
-
-    Integer centerId;
+public class AddPersonRequestDto {
 
     String name;
 
