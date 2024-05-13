@@ -131,4 +131,24 @@ public class AppointmentService {
         // finally return the response dto
         return bookAppointmentResponseDto;
     }
+
+//    public void sendMail(){
+//        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+//        simpleMailMessage.setFrom("nahidahussain410@gmail.com");
+//        simpleMailMessage.setTo("nahidapraveen91@gmail.com");
+//        simpleMailMessage.setSubject("Congrats !! Your Appointment is Booked !!");
+//
+//        String text = "Hi " + "Ajay" + "\nYour appointment has been booked with doctor " +
+//                "Nahida" + "." + "\nYour vaccination center name is: " + "Hyderabad"+
+//                "\nPlease reach at this address: " + "Sec-54" +
+//                "\nTiming of Your appointment is: " + "15/05/2024" +
+//                "\nYour Appointment Id is: " + "AppointmentId :- 0001" +
+//                "\n\n\n\n\n\n\n" + "\nAll the best!" + "\nBlue Solutions";
+//
+//
+//        simpleMailMessage.setText(text);
+//
+//        // after setting this mail, send the mail
+//        javaMailSender.send(simpleMailMessage);
+//    }
 }

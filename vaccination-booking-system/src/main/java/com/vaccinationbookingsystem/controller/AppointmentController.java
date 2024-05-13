@@ -29,4 +29,15 @@ public class AppointmentController {
             return new ResponseEntity(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
+
+//    @PostMapping("/sentEmail")
+//    public ResponseEntity<String> sendEmail(){
+//        try {
+//            appointmentService.sendMail();
+//            return new ResponseEntity<>("Email sent succesfully",HttpStatus.OK);
+//        }
+//        catch (Exception e){
+//            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+//        }
+//    }
 }
