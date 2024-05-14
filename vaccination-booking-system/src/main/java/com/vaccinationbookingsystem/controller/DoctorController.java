@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/doctor")
+@RequestMapping("/api/doctor")
 public class DoctorController {
 
     @Autowired
@@ -42,4 +42,6 @@ public class DoctorController {
             return  new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
+
+
 }

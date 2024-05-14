@@ -1,12 +1,10 @@
 package com.vaccinationbookingsystem.model;
 
 import com.vaccinationbookingsystem.Enum.Gender;
+import com.vaccinationbookingsystem.Enum.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Builder
@@ -14,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "person")
-public class Person {
+@Table(name = "user")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,21 +31,9 @@ public class Person {
     @Enumerated(EnumType.STRING)
     Gender gender;
 
-    boolean Dose1Taken;
-
-    boolean Dose2Taken;
-
-    @OneToMany(mappedBy = "person",cascade = CascadeType.ALL)
-    //means one person can have multiple doses
-    // and if a person is having multiple doses then i need a data structure to store multiple doses, so i use list
-    List<Dose> dosesTaken = new ArrayList<>(); // becoz initially person ne 0 dose lagayi hogi, isliye humne yahi initialize kar diya yaha
-
-    @OneToOne(mappedBy = "person",cascade = CascadeType.ALL)
-    Certificate certificate;
-
-    @OneToMany(mappedBy = "person",cascade = CascadeType.ALL )
-    List<Appointment> appointmentList = new ArrayList<>();
-
     @Column(name = "password",nullable = false)
     String password;
+
+//    @Enumerated(value = EnumType.ORDINAL)
+    UserRole userRole;
 }

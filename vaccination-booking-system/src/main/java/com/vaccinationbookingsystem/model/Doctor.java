@@ -24,6 +24,9 @@ public class Doctor {
 
     int age;
 
+    @Column(name = "password",nullable = false)
+    String password;
+
     @Column(unique = true,nullable = false)
     String emailId;
 

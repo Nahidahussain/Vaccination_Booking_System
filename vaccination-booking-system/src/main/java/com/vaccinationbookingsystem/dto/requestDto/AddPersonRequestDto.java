@@ -18,4 +18,6 @@ public class AddPersonRequestDto {
     String emailId;
 
     Gender gender;
+
+    String Password;
 }
